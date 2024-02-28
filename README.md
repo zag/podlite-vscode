@@ -56,16 +56,56 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
 
 ## Useful links
+<div align="center">
 
-📖 _Project site_: [podlite.org](https://podlite.org)
 
-📌 _Github_: [github.com/podlite](https://github.com/podlite/) 🤩
+<table border=0><tr><td valign=top><div align="center">
 
-🖥️ _Online editor_: [pod6.in](https://pod6.in/)
+##### specification
 
-🖥️ _Desktop editor/viewer_: [github.com/podlite/podlite-desktop](https://github.com/podlite/podlite-desktop) - the viewer and editor of `.podlite` and `.pod6` files for Windows, Linux and Mac.
+</div>
 
-📚 _Podlite for web_ - static site generator: [github.com/podlite/podlite-web](https://github.com/podlite/podlite-web)
+* [Source](https://github.com/podlite/podlite-specs)
+* [in HTML](https://podlite.org/specification)
+* [Discussions](https://github.com/podlite/podlite-specs/discussions)
+* [Implementation](https://github.com/podlite/podlite)
+
+</td><td valign=top><div align="center">
+
+##### publishing system
+
+</div>
+
+* [Podlite-web](https://github.com/podlite/podlite-web)
+* [How-to article](https://zahatski.com/2022/8/23/1/start-you-own-blog-site-with-podlite-for-web)
+* [Issues](https://github.com/podlite/podlite-specs/issues)
+
+</td><td valign=top><div align="center">
+  
+##### desktop viewer/editor
+
+</div>
+
+* [Podlite-desktop](https://github.com/podlite/podlite-desktop)
+* [Releases](https://github.com/podlite/podlite-desktop/releases)
+* [Issues](https://github.com/podlite/podlite-desktop/issues)
+
+</td><td valign=top><div align="center">
+
+##### online resurces 
+
+ </div>
+
+
+* [podlite.org](https://podlite.org)
+* [pod6.in](https://pod6.in/)
+* [github.com/podlite](https://github.com/podlite/) 🤩
+
+
+</td></tr></table>
+
+
+</div>
 
 ## AUTHOR
 
