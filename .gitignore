@@ -10,6 +10,7 @@ tsconfig.tsbuildinfo
 lib
 built
 esm
+dist
 
 # non Zero-Installs
 .pnp.*
@@ -19,6 +20,8 @@ esm
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+**/*.js.map
 
 
 
