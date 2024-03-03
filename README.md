@@ -12,7 +12,7 @@
 
 This plugin brings the simplicity and power of Podlite, the modern, block-oriented, lightweight markup language, directly into your favorite code editor, powered by Artificial Intelligence. 🤖
 
-It's like having a personal doc assistant that understands your code and takes care of the tedious parts of documentation, so you can focus on what you do best - coding! 
+It's like having a personal doc assistant that understands your code and takes care of the tedious parts of documentation, so you can focus on what you do best - coding!
 
 🔍 **About Podlite:**
 
@@ -96,14 +96,11 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
  </div>
 
-
-* [podlite.org](https://podlite.org)
-* [pod6.in](https://pod6.in/)
-* [github.com/podlite](https://github.com/podlite/) 🤩
-
+- [podlite.org](https://podlite.org)
+- [pod6.in](https://pod6.in/)
+- [github.com/podlite](https://github.com/podlite/) 🤩
 
 </td></tr></table>
-
 
 </div>
 
