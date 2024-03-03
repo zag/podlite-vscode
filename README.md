@@ -4,8 +4,6 @@
 
 </div>
 
-
-
 # Podlite AI-Assisted Documentation Plugin for VSCode
 
 🚀 Welcome to the Podlite AI-Assisted Documentation Plugin for VSCode! It designed to help developers maintain high-quality code documentation with ease. It's like having a personal doc assistant that understands your code and takes care of the tedious parts of documentation, so you can focus on what you do best - coding!
@@ -21,7 +19,6 @@ Podlite is a lightweight block-based markup language designed for flexibility an
 Podlite is not limited to any specific application domain, programming language, or concept.
 
 In addition, the support for Markdown markup as a standard block adds convenience and allows for the use of familiar syntax for text formatting.
-
 
 🛠️ **Project Mission:**
 Our mission is to integrate Podlite support into VSCode, enhancing your coding experience with a sprinkle of AI magic. We aim to streamline your workflow, making documentation as intelligent and dynamic as your code.
@@ -50,14 +47,13 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 ## 🛠 How to Use
 
 1. Install the Podlite plugin from the VSCode Marketplace.
-2. Open your project and let Podlite scan your code.
+2. Open your project and let Podlite help document your code.
 3. Follow the AI suggestions to enhance your documentation.
 4. Keep an eye out for new features and updates!
 
-
 ## Useful links
-<div align="center">
 
+<div align="center">
 
 <table border=0><tr><td valign=top><div align="center">
 
@@ -65,10 +61,10 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
 </div>
 
-* [Source](https://github.com/podlite/podlite-specs)
-* [in HTML](https://podlite.org/specification)
-* [Discussions](https://github.com/podlite/podlite-specs/discussions)
-* [Implementation](https://github.com/podlite/podlite)
+- [Source](https://github.com/podlite/podlite-specs)
+- [in HTML](https://podlite.org/specification)
+- [Discussions](https://github.com/podlite/podlite-specs/discussions)
+- [Implementation](https://github.com/podlite/podlite)
 
 </td><td valign=top><div align="center">
 
@@ -76,9 +72,9 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
 </div>
 
-* [Podlite-web](https://github.com/podlite/podlite-web)
-* [How-to article](https://zahatski.com/2022/8/23/1/start-you-own-blog-site-with-podlite-for-web)
-* [Issues](https://github.com/podlite/podlite-specs/issues)
+- [Podlite-web](https://github.com/podlite/podlite-web)
+- [How-to article](https://zahatski.com/2022/8/23/1/start-you-own-blog-site-with-podlite-for-web)
+- [Issues](https://github.com/podlite/podlite-specs/issues)
 
 </td><td valign=top><div align="center">
   
@@ -86,13 +82,13 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
 </div>
 
-* [Podlite-desktop](https://github.com/podlite/podlite-desktop)
-* [Releases](https://github.com/podlite/podlite-desktop/releases)
-* [Issues](https://github.com/podlite/podlite-desktop/issues)
+- [Podlite-desktop](https://github.com/podlite/podlite-desktop)
+- [Releases](https://github.com/podlite/podlite-desktop/releases)
+- [Issues](https://github.com/podlite/podlite-desktop/issues)
 
 </td><td valign=top><div align="center">
 
-##### online resurces 
+##### online resurces
 
  </div>
 
@@ -106,7 +102,7 @@ Contributions are welcome! If you're passionate about documentation and AI, and 
 
 ## AUTHOR
 
-Copyright (c) 2021-2024 Aliaksandr Zahatski
+Copyright (c) 2024 Aliaksandr Zahatski
 
 ## 📜 License
 

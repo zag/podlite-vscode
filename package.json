@@ -1,10 +1,19 @@
 {
   "name": "podlite",
-  "displayName": "podlite",
+  "displayName": "Podlite",
   "description": "Podlite AI-Assisted Documentation Plugin for VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.86.0"
+  },
+  "author": {
+    "name": "Aliaksandr Zahatski",
+    "email": "zag@cpan.org"
+  },
+  "icon": "podlite_logo_256x256.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zag/podlite-vscode.git"
   },
   "categories": [
     "Programming Languages",
@@ -17,10 +26,44 @@
   "contributes": {
     "commands": [
       {
-        "command": "podlite.helloWorld",
-        "title": "Hello World"
+        "command": "podlite.ai.createDoc",
+        "title": "Podlite ✨: Create Doc"
+      },
+      {
+        "command": "podlite.openSettings",
+        "title": "Podlite: open settings"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Podlite - documenting your code with AI",
+      "properties": {
+        "podlite.ai.openAI.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API Key (Default: '')",
+          "title": "API Key",
+          "patternErrorMessage": "Invalid API Key format. Please enter a valid API Key.",
+          "markdownDescription": "API Key is required to authenticate and access the [OpenAI Platform](https://platform.openai.com/account/api-keys)."
+        },
+        "podlite.ai.openAI.engine": {
+          "type": "string",
+          "default": "gpt-4-turbo-preview",
+          "description": "AI Model (Default: 'gpt-3.5-turbo-1106')",
+          "title": "AI Model",
+          "enum": [
+            "text-embedding-3-small",
+            "gpt-4-turbo-preview",
+            "gpt-3.5-turbo-1106"
+          ],
+          "markdownDescription": "The AI Model determines the behavior and capabilities of the language model."
+        },
+        "podlite.ai.openAI.docPrompt": {
+          "type": "string",
+          "default": "Generate documentation for the following {lang} function {functionText}. Do not add any other strings beside the function and its documentation. Include data about the params and the return, and also a description about the function, do not include examples.{note}",
+          "description": "Use the following keys to customize the prompt: {lang} - lang of sources , {functionText} - selected text, {note} - additional notes"   
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
@@ -32,7 +75,8 @@
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "format": "npx prettier --write '**/*.{js,jsx,ts,tsx,json,md,mjs}'"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
@@ -48,5 +92,8 @@
     "typescript": "^5.3.3",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "openai": "^4.28.4"
   }
 }
