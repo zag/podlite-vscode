@@ -24,6 +24,21 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "podlite",
+        "aliases": [
+          "Podlite",
+          "PodLite"
+        ],
+        "extensions": [
+          ".podlite",
+          ".podl",
+          ".pod6",
+          ".rakudoc"
+        ]
+      }
+    ],
     "commands": [
       {
         "command": "podlite.ai.createDoc",
@@ -32,6 +47,16 @@
       {
         "command": "podlite.openSettings",
         "title": "Podlite: open settings"
+      },
+      {
+        "command": "podlite.preview",
+        "title": "Toggle Preview",
+        "category": "Podlite"
+      },
+      {
+        "command": "podlite.previewToSide",
+        "title": "Open Preview to the Side",
+        "category": "Podlite"
       }
     ],
     "configuration": {
@@ -60,7 +85,7 @@
         "podlite.ai.openAI.docPrompt": {
           "type": "string",
           "default": "Generate documentation for the following {lang} function {functionText}. Do not add any other strings beside the function and its documentation. Include data about the params and the return, and also a description about the function, do not include examples.{note}",
-          "description": "Use the following keys to customize the prompt: {lang} - lang of sources , {functionText} - selected text, {note} - additional notes"   
+          "description": "Use the following keys to customize the prompt: {lang} - lang of sources , {functionText} - selected text, {note} - additional notes"
         }
       }
     }
@@ -73,6 +98,10 @@
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "_compile_prveiw": "npx esbuild@0.21.4 src/webview/index.tsx --sourcemap --bundle --outfile=out/index.js --external:vscode --format=cjs --platform=browser --minify",
+    "compile_prveiw": "npx esbuild@0.21.4 src/webview/index.tsx --sourcemap --bundle --outfile=out/index.js --external:vscode --format=cjs --platform=browser",
+    "webpack-frontend-dev": "webpack --mode development --watch --config ./webpack.frontend.config.js",
+    "prewebpack": "webpack --mode development --config ./webpack.frontend.config.js",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
     "clean": "rimraf dist",
@@ -81,12 +110,16 @@
   "devDependencies": {
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
+    "@types/react": "^18",
+    "@types/react-dom": "^18.2.18",
     "@types/vscode": "^1.86.0",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "@vscode/test-cli": "^0.0.4",
     "@vscode/test-electron": "^2.3.9",
+    "copy-webpack-plugin": "^13.0.0",
     "eslint": "^8.56.0",
+    "podlite": "^0.0.42",
     "rimraf": "^5.0.5",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
@@ -94,6 +127,26 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "openai": "^4.28.4"
+    "@podlite/editor-react": "^0.0.35",
+    "@podlite/markdown": "^0.0.18",
+    "@podlite/to-jsx": "^0.0.29",
+    "css-loader": "^7.1.2",
+    "esbuild": "0.21.4",
+    "openai": "^4.28.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^4.0.0"
+  },
+  "resolutions": {
+    "podlite": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/core",
+    "@podlite/diagram": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-diagrams",
+    "@podlite/editor-react": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-editor-react",
+    "@podlite/formula": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-formula",
+    "@podlite/image": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-image",
+    "@podlite/markdown": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-markdown",
+    "@podlite/publisher": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-publisher",
+    "@podlite/schema": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-schema",
+    "@podlite/to-jsx": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-to-jsx",
+    "@podlite/toc": "portal:/Users/zag/Dropbox/Work/proj/podlite/packages/podlite-toc"
   }
 }
